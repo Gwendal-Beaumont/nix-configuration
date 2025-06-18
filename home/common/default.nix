@@ -40,13 +40,7 @@
     dnsutils
     nmap
 
-    # Fonts
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
-
     # Productivity
-    webex
     libreoffice-fresh
     texliveFull
     drawio

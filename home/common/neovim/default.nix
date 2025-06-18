@@ -9,10 +9,5 @@
 
     withNodeJs = true;
     withRuby = true;
-
-    extraPackages = with pkgs; [
-      ripgrep
-      markdownlint-cli
-    ];
   };
 }

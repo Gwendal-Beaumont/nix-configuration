@@ -11,10 +11,7 @@
     withRuby = true;
 
     extraPackages = with pkgs; [
-      pyright
       ripgrep
-      typescript-language-server
-      yaml-language-server
       markdownlint-cli
     ];
   };

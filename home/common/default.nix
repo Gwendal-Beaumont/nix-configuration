@@ -57,17 +57,6 @@
     pciutils
     lazygit
     gnomeExtensions.appindicator
-
-    # Languages
-    python314
-    pyenv
-    jdk24
-    nodejs-slim_24
-    lua
-    luajitPackages.luarocks
-    go
-    rustup
-    ruby
   ];
 
   # This value determines the Home Manager release that your

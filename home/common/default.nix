@@ -4,6 +4,9 @@
   imports = [
     ./git
     ./hyprland
+    ./kitty
+    ./neovim
+    ./starship
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -83,40 +86,4 @@
   programs.firefox.enable = true;
   programs.eclipse.enable = true;
   programs.element-desktop.enable = true;
-
-  programs.kitty = {
-    enable = true;
-
-    font = {
-      package = pkgs.nerd-fonts.jetbrains-mono;
-      name = "JetBrainsMono Nerd Font Mono";
-      size = 12.0;
-    };
-
-    themeFile = "Japanesque";
-  };
-
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-
-    settings = {
-      add_newline = false;
-    };
-  };
-
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    viAlias = true;
-    vimAlias = true;
-
-    extraPackages = with pkgs; [
-      pyright
-      ripgrep
-      typescript-language-server
-      yaml-language-server
-      markdownlint-cli
-    ];
-  };
 }

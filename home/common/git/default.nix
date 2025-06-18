@@ -18,20 +18,6 @@
         defaultBranch = "main";
       };
 
-      color = {
-        ui = "auto";
-      };
-
-      diff = {
-        tool = "kitty";
-        guitool = "kitty.gui";
-      };
-
-      difftool = {
-        prompt = false;
-        trustExitCode = true;
-      };
-
       credential = {
         helper = "${
           pkgs.git.override { withLibsecret = true; }

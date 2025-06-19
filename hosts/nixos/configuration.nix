@@ -114,7 +114,6 @@
 
     # Utilities
     power-profiles-daemon
-    usbutils
     wireshark
   ];
 

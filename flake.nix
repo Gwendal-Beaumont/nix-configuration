@@ -38,7 +38,7 @@
 	  {
 	    home-manager.useGlobalPkgs = true;
 	    home-manager.useUserPackages = true;
-	    home-manager.users.g23beaum = ./home/common;
+	    home-manager.users.${username} = ./home/common;
 
 	    # Optionally, use home-manager.extraSpecialArgs to pass
 	    # arguments to home.nix

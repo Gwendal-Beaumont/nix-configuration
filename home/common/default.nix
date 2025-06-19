@@ -2,7 +2,11 @@
 
 {
   imports = [
+    ./eclipse
+    ./element-desktop
+    ./firefox
     ./git
+    ./gpg
     ./hyprland
     ./kitty
     ./neovim
@@ -16,8 +20,6 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    fastfetch
-
     # Archives
     zip
     unzip
@@ -26,12 +28,14 @@
     bat
     btop
     lf
+    fastfetch
     fd
     fzf
     libimobiledevice
     libsecret
     stow
     tree-sitter
+    usbutils
     wl-clipboard
     zsh-autosuggestions
     zsh-syntax-highlighting
@@ -44,6 +48,7 @@
     libreoffice-fresh
     texliveFull
     drawio
+    slack
 
     # Misc
     which
@@ -65,8 +70,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  programs.firefox.enable = true;
-  programs.eclipse.enable = true;
-  programs.element-desktop.enable = true;
 }

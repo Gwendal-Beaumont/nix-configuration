@@ -8,7 +8,7 @@
   # Flatpaks to install
   services.flatpak.packages = [
     "com.discordapp.Discord"
-    "com.slack.Slack"
+    # "com.slack.Slack"
     "org.signal.Signal"
 
     "org.zotero.Zotero"

@@ -15,44 +15,110 @@
       url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # nix-darwin (macOS machines)
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, nix-flatpak, nix-darwin, ... }@inputs:
     let
-      system = "x86_64-linux";
-      host = "nixos";
-      username = "g23beaum";
-    in {
-    nixosConfigurations = {
-      "${host}" = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-	  inherit system;
-	  inherit username;
+      inherit (self) outputs;
+      nix_hostname = "nixos";
+      nix_username = "g23beaum";
+      darwin_hostname = "Gwendals-MacBook-Pro";
+      darwin_username = "gwendalbeaumont";
+
+	#      mkNixosConfiguration = hostname: username:
+	#      nixpkgs.lib.nixosSystem {
+	# specialArgs = {
+	#   inherit inputs outputs hostname;
+	#   userConfig = users.${username};
+	#   nixosModules = "${self}/modules/nixos";
+	# };
+	# modules = [ ./hosts/${hostname} ];
+	#      };
+
+	  #    mkDarwinConfiguration = hostname: username:
+	  #    nix-darwin.lib.darwinSystem {
+	  # system = "aarch64-darwin";
+	  # specialArgs = {
+	  #   inherit inputs outputs hostname;
+	  #   userConfig = users.${username};
+	  # };
+	  # modules = [
+	  #   ./hosts/${hostname}
+	  #   home-manager.darwinModules.home-manager
+	  #   {
+	  #     home-manager.useGlobalPkgs = true;
+	  #     home-manager.useUserPackages = true;
+	  #     home-manager.users.gwendalbeaumont = ./home.nix;
+	  #   }
+	  # ];
+	  #    };
+
+	  #    mkHomeConfiguration = system: hostname: username:
+	  #    home-manager.lib.homeManagerConfiguration {
+	  # pkgs = import nixpkgs { inherit system; };
+	  #
+	  # extraSpecialArgs = {
+	  #   inherit inputs outputs;
+	  #   userConfig = users.${username};
+	  #   nhModules = "${self}/modules/home-manager";
+	  # };
+	  #
+	  # modules = [
+	  #   ./home/${hostname}
+	  # ];
+	  #    };
+    in
+    {
+      nixosConfigurations = {
+	"${nix_hostname}" = nixpkgs.lib.nixosSystem {
+	  specialArgs = {
+	    inherit nix_username;
+	  };
+
+	  modules = [
+	    ./hosts/${nix_hostname}
+
+	    # Home-Manager
+	    home-manager.nixosModules.home-manager
+	    {
+	      home-manager.useGlobalPkgs = true;
+	      home-manager.useUserPackages = true;
+	      home-manager.users.${nix_username} = ./home/common;
+
+	      # Optionally, use home-manager.extraSpecialArgs to pass
+	      # arguments to home.nix
+	    }
+
+	    nix-flatpak.nixosModules.nix-flatpak
+	    ./flatpak.nix
+
+	    {
+	      nixpkgs.overlays = [
+		inputs.hyprpanel.overlay
+	      ];
+	    }
+	  ];
 	};
+      };
 
-        modules = [
-      	  ./hosts/${host}/configuration.nix
+    darwinConfigurations = {
+      "${darwin_hostname}" = nix-darwin.lib.darwinSystem {
+	modules = [
+	  ./hosts/${darwin_hostname}
 
-	  # Home-Manager
-	  home-manager.nixosModules.home-manager
+	  home-manager.darwinModules.home-manager
 	  {
 	    home-manager.useGlobalPkgs = true;
 	    home-manager.useUserPackages = true;
-	    home-manager.users.${username} = ./home/common;
-
-	    # Optionally, use home-manager.extraSpecialArgs to pass
-	    # arguments to home.nix
+	    home-manager.users.${darwin_username} = ./home/${darwin_hostname};
 	  }
-
-	  nix-flatpak.nixosModules.nix-flatpak
-	  ./flatpak.nix
-
-	  {
-	    nixpkgs.overlays = [
-	      inputs.hyprpanel.overlay
-	    ];
-	  }
-        ];
+	];
       };
     };
   };

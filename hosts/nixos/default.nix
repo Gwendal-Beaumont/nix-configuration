@@ -58,7 +58,41 @@
   console.keyMap = "fr";
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+
+    clientConf =
+      "
+ServerName cups-br-01.imta.fr
+Encryption Required
+      ";
+  };
+
+  security.krb5 = {
+    enable = true;
+
+    settings = {
+      libdefaults = {
+        default_realm = "CAMPUX.ENST-BRETAGNE.FR";
+        forwardable = true;
+        ticket_lifetime = "12h";
+        renew_lifetime = "90d";
+      };
+
+      realms = {
+        "CAMPUX.ENST-BRETAGNE.FR" = {
+          kdc = "ldap-public-01.enst-bretagne.fr:88";
+        };
+      };
+
+      domain_realm = {
+        ".priv.enst-bretagne.fr" = "CAMPUX.ENST-BRETAGNE.FR";
+        ".svc.enst-bretagne.fr" = "CAMPUX.ENST-BRETAGNE.FR";
+        ".ext.enst-bretagne.fr" = "CAMPUX.ENST-BRETAGNE.FR";
+        ".enst-bretagne.fr" = "CAMPUX.ENST-BRETAGNE.FR";
+      };
+    };
+  };
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -111,6 +145,7 @@
     gnupg
     pinentry
     gcc
+    openvpn
 
     # Utilities
     power-profiles-daemon
@@ -118,7 +153,10 @@
   ];
 
   # Env
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    CUPS_GSSSERVICENAME = "ipp";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

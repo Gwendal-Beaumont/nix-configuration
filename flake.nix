@@ -28,8 +28,6 @@
       inherit (self) outputs;
       nix_hostname = "nixos";
       nix_username = "g23beaum";
-      darwin_hostname = "Gwendals-MacBook-Pro";
-      darwin_username = "gwendalbeaumont";
 
 	#      mkNixosConfiguration = hostname: username:
 	#      nixpkgs.lib.nixosSystem {
@@ -41,23 +39,24 @@
 	# modules = [ ./hosts/${hostname} ];
 	#      };
 
-	  #    mkDarwinConfiguration = hostname: username:
-	  #    nix-darwin.lib.darwinSystem {
-	  # system = "aarch64-darwin";
-	  # specialArgs = {
-	  #   inherit inputs outputs hostname;
-	  #   userConfig = users.${username};
-	  # };
-	  # modules = [
-	  #   ./hosts/${hostname}
-	  #   home-manager.darwinModules.home-manager
-	  #   {
-	  #     home-manager.useGlobalPkgs = true;
-	  #     home-manager.useUserPackages = true;
-	  #     home-manager.users.gwendalbeaumont = ./home.nix;
-	  #   }
-	  # ];
-	  #    };
+      mkDarwinConfiguration = hostname: username:
+	nix-darwin.lib.darwinSystem {
+	  system = "aarch64-darwin";
+	  specialArgs = {
+	    inherit inputs outputs hostname;
+	    userConfig = "${username}";
+	  };
+
+	  modules = [
+	    ./hosts/${hostname}
+	    home-manager.darwinModules.home-manager
+	    {
+	      home-manager.useGlobalPkgs = true;
+	      home-manager.useUserPackages = true;
+	      home-manager.users.${username} = ./home/${hostname};
+	    }
+	  ];
+	};
 
 	  #    mkHomeConfiguration = system: hostname: username:
 	  #    home-manager.lib.homeManagerConfiguration {
@@ -108,18 +107,7 @@
       };
 
     darwinConfigurations = {
-      "${darwin_hostname}" = nix-darwin.lib.darwinSystem {
-	modules = [
-	  ./hosts/${darwin_hostname}
-
-	  home-manager.darwinModules.home-manager
-	  {
-	    home-manager.useGlobalPkgs = true;
-	    home-manager.useUserPackages = true;
-	    home-manager.users.${darwin_username} = ./home/${darwin_hostname};
-	  }
-	];
-      };
+      "Gwendals-MacBook-Pro" = mkDarwinConfiguration "Gwendals-MacBook-Pro" "gwendalbeaumont";
     };
   };
 }

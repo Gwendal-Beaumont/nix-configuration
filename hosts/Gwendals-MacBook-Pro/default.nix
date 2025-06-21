@@ -131,8 +131,8 @@
   programs.zsh = {
     enable = true;
 
-    enableAutosuggestions = true;
+    # enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     enableFzfCompletion = true;
-  }
+  };
 }

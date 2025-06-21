@@ -26,8 +26,6 @@
   outputs = { self, nixpkgs, home-manager, nix-flatpak, nix-darwin, ... }@inputs:
     let
       inherit (self) outputs;
-      nix_hostname = "nixos";
-      nix_username = "g23beaum";
 
       mkNixosConfiguration = hostname: username:
 	nixpkgs.lib.nixosSystem {

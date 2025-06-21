@@ -11,6 +11,7 @@
     config = {
       allowUnfree = true;
     };
+    hostPlatform = "aarch64-darwin";
   };
 
   users.users.${username} = {
@@ -49,6 +50,12 @@
         disable-shadow = true;
       };
     };
+
+    primaryUser = "${username}";
+
+    # Used for backwards compatibility, please read the changelog before changing.
+    # $ darwin-rebuild changelog
+    stateVersion = 5;
   };
 
   # List packages installed in system profile. To search by name, run:
@@ -120,14 +127,12 @@
       "zotero"
     ];
   };
-  # Set Git commit hash for darwin-version.
-  # system.configurationRevision = self.rev or self.dirtyRev or null;
 
-  # Used for backwards compatibility, please read the changelog before changing.
-  # $ darwin-rebuild changelog
-  system.stateVersion = 5;
-  system.primaryUser = "${username}";
+  programs.zsh = {
+    enable = true;
 
-  # The platform the configuration will be used on.
-  nixpkgs.hostPlatform = "aarch64-darwin";
+    enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
+    enableFzfCompletion = true;
+  }
 }

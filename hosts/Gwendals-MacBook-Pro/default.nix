@@ -4,13 +4,13 @@
     settings = {
       experimental-features = "nix-command flakes";
     };
+    optimise.automatic = true;
   };
 
   nixpkgs = {
     config = {
       allowUnfree = true;
     };
-    optimise.automatic = true;
   };
 
   users.users.${username} = {

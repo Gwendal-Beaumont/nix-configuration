@@ -18,6 +18,12 @@
     home = "/Users/${username}";
   };
 
+  # Enable TouchID with sudo
+  security.pam.services.sudo_local = {
+    touchIdAuth = true;
+    watchIdAuth = true;
+  };
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [

@@ -64,7 +64,7 @@
     vim
     fastfetch
     bat
-    biber
+    # biber
     cairo
     cocoapods
     coreutils
@@ -73,15 +73,15 @@
     fzf
     git
     gnupg
-    go
-    gopls
+    # go
+    # gopls
     lazygit
-    lua
-    neovim
+    # lua
+    # neovim
     jdk
-    php
+    # php
     ripgrep
-    ruby
+    # ruby
     rustup
     starship
     stow
@@ -109,7 +109,7 @@
       "firefox"
       "gimp"
       "google-chrome"
-      "kitty"
+      # "kitty"
       "libreoffice"
       "logi-options+"
       "openvpn-connect"

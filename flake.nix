@@ -30,7 +30,7 @@
       mkNixosConfiguration = hostname: username:
 	nixpkgs.lib.nixosSystem {
 	  specialArgs = {
-	    inherit inputs outputs hostname;
+	    inherit inputs outputs hostname username;
 	    userConfig = "${username}";
 	    # nixosModules = "${self}/modules/nixos";
 	  };
@@ -62,8 +62,8 @@
 	nix-darwin.lib.darwinSystem {
 	  system = "aarch64-darwin";
 	  specialArgs = {
-	    inherit inputs outputs hostname;
-	    userConfig = "${username}";
+	    inherit inputs outputs hostname username;
+	    # userConfig = "${username}";
 	  };
 
 	  modules = [

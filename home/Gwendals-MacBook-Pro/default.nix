@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ../common
+  ];
+
   home.username = "gwendalbeaumont";
 
   home.packages = with pkgs; [

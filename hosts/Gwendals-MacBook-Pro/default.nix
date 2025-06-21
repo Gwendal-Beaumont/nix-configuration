@@ -109,7 +109,7 @@
       "firefox"
       "gimp"
       "google-chrome"
-      # "kitty"
+      "kitty"
       "libreoffice"
       "logi-options+"
       "openvpn-connect"

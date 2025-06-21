@@ -29,15 +29,36 @@
       nix_hostname = "nixos";
       nix_username = "g23beaum";
 
-	#      mkNixosConfiguration = hostname: username:
-	#      nixpkgs.lib.nixosSystem {
-	# specialArgs = {
-	#   inherit inputs outputs hostname;
-	#   userConfig = users.${username};
-	#   nixosModules = "${self}/modules/nixos";
-	# };
-	# modules = [ ./hosts/${hostname} ];
-	#      };
+      mkNixosConfiguration = hostname: username:
+	nixpkgs.lib.nixosSystem {
+	  specialArgs = {
+	    inherit inputs outputs hostname;
+	    userConfig = "${username}";
+	    # nixosModules = "${self}/modules/nixos";
+	  };
+
+	  modules = [
+	    ./hosts/${hostname}
+	    home-manager.nixosModules.home-manager
+	    {
+	      home-manager.useGlobalPkgs = true;
+	      home-manager.useUserPackages = true;
+	      home-manager.users.${username} = ./home/${hostname};
+
+	      # Optionally, use home-manager.extraSpecialArgs to pass
+	      # arguments to home.nix
+	    }
+
+	    nix-flatpak.nixosModules.nix-flatpak
+	    ./flatpak.nix
+
+	    {
+	      nixpkgs.overlays = [
+		inputs.hyprpanel.overlay
+	      ];
+	    }
+	  ];
+	};
 
       mkDarwinConfiguration = hostname: username:
 	nix-darwin.lib.darwinSystem {
@@ -75,35 +96,7 @@
     in
     {
       nixosConfigurations = {
-	"${nix_hostname}" = nixpkgs.lib.nixosSystem {
-	  specialArgs = {
-	    inherit nix_username;
-	  };
-
-	  modules = [
-	    ./hosts/${nix_hostname}
-
-	    # Home-Manager
-	    home-manager.nixosModules.home-manager
-	    {
-	      home-manager.useGlobalPkgs = true;
-	      home-manager.useUserPackages = true;
-	      home-manager.users.${nix_username} = ./home/common;
-
-	      # Optionally, use home-manager.extraSpecialArgs to pass
-	      # arguments to home.nix
-	    }
-
-	    nix-flatpak.nixosModules.nix-flatpak
-	    ./flatpak.nix
-
-	    {
-	      nixpkgs.overlays = [
-		inputs.hyprpanel.overlay
-	      ];
-	    }
-	  ];
-	};
+	"nixos" = mkNixosConfiguration "nixos" "g23beaum";
       };
 
     darwinConfigurations = {

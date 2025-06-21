@@ -24,6 +24,33 @@
     watchIdAuth = true;
   };
 
+  system = {
+    defaults = {
+      CustomUserPreferences = {
+        NSGlobalDomain."com.apple.mouse.linear" = true;
+      };
+      NSGlobalDomain = {
+        AppleInterfaceStyleSwitchesAutomatically = true;
+        AppleShowAllExtensions = true;
+        NSAutomaticWindowAnimationsEnabled = false;
+      };
+      dock = {
+        autohide = true;
+        expose-animation-duration = 0.15;
+        show-recents = false;
+        showhidden = true;
+        wvous-bl-corner = 1;
+        wvous-br-corner = 1;
+        wvous-tl-corner = 1;
+        wvous-tr-corner = 1;
+      };
+      screencapture = {
+        type = "png";
+        disable-shadow = true;
+      };
+    };
+  };
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [

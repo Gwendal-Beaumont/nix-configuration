@@ -11,6 +11,7 @@
     cairo
     cocoapods
     coreutils
+    nerd-fonts.jetbrains-mono
   ];
 
   home.stateVersion = "25.05";

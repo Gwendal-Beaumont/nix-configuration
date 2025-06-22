@@ -8,8 +8,9 @@
   home.username = "gwendalbeaumont";
 
   home.packages = with pkgs; [
-    htop
-    fortune
+    cairo
+    cocoapods
+    coreutils
   ];
 
   home.stateVersion = "25.05";

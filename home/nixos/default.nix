@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ../common
+
     ./eclipse
     ./element-desktop
     ./firefox
@@ -9,8 +11,6 @@
     ./gpg
     ./hyprland
     ./kitty
-    ./neovim
-    ./starship
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -20,25 +20,11 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    # Archives
-    zip
-    unzip
-
     # Utils
-    bat
-    btop
-    lf
-    fastfetch
-    fd
-    fzf
     libimobiledevice
     libsecret
-    stow
-    tree-sitter
     usbutils
     wl-clipboard
-    zsh-autosuggestions
-    zsh-syntax-highlighting
 
     # Network
     dnsutils
@@ -46,15 +32,12 @@
 
     # Productivity
     libreoffice-fresh
-    texliveFull
     drawio
     slack
 
     # Misc
     which
-    tree
     pciutils
-    lazygit
     gnomeExtensions.appindicator
   ];
 

@@ -8,14 +8,14 @@
     # ./git
     # ./gpg
     # ./hyprland
-    ./kitty
+    # ./kitty
     ./neovim
     ./shell
     # ./starship
   ];
 
 #   # Packages that should be installed to the user profile.
-#   home.packages = with pkgs; [
+  home.packages = with pkgs; [
 #     # Archives
 #     zip
 #     unzip
@@ -23,7 +23,7 @@
 #     # Utils
 #     bat
 #     btop
-#     lf
+    lf
 #     fastfetch
 #     fd
 #     fzf
@@ -52,5 +52,5 @@
 #     pciutils
 #     lazygit
 #     gnomeExtensions.appindicator
-#   ];
+  ];
 }

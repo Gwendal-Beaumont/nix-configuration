@@ -42,9 +42,6 @@
 	      home-manager.useGlobalPkgs = true;
 	      home-manager.useUserPackages = true;
 	      home-manager.users.${username} = ./home/${hostname};
-
-	      # Optionally, use home-manager.extraSpecialArgs to pass
-	      # arguments to home.nix
 	    }
 
 	    nix-flatpak.nixosModules.nix-flatpak
@@ -77,28 +74,42 @@
 	  ];
 	};
 
-	  #    mkHomeConfiguration = system: hostname: username:
-	  #    home-manager.lib.homeManagerConfiguration {
-	  # pkgs = import nixpkgs { inherit system; };
-	  #
-	  # extraSpecialArgs = {
-	  #   inherit inputs outputs;
-	  #   userConfig = users.${username};
-	  #   nhModules = "${self}/modules/home-manager";
-	  # };
-	  #
-	  # modules = [
-	  #   ./home/${hostname}
-	  # ];
-	  #    };
+	#      mkHomeConfiguration = system: hostname: username:
+	# home-manager.lib.homeManagerConfiguration {
+	#  pkgs = import nixpkgs { inherit system; };
+	#
+	#   extraSpecialArgs = {
+	#     inherit inputs outputs;
+	#     userConfig = users.${username};
+	#     nhModules = "${self}/modules/home-manager";
+	#   };
+	#
+	#   modules = [
+	#     ./home/${hostname}
+	#
+	#     {
+	#       home-manager.useGlobalPkgs = true;
+	#       home-manager.useUserPackages = true;
+	#       home-manager.users.${username} = ./home/${hostname};
+	#
+	#       # Optionally, use home-manager.extraSpecialArgs to pass
+	#       # arguments to home.nix
+	#     }
+	#   ];
+	# };
     in
     {
       nixosConfigurations = {
 	"nixos" = mkNixosConfiguration "nixos" "g23beaum";
       };
 
-    darwinConfigurations = {
-      "Gwendals-MacBook-Pro" = mkDarwinConfiguration "Gwendals-MacBook-Pro" "gwendalbeaumont";
+      darwinConfigurations = {
+	"Gwendals-MacBook-Pro" = mkDarwinConfiguration "Gwendals-MacBook-Pro" "gwendalbeaumont";
+      };
+
+	#      homeManagerConfiguration = {
+	# "g23beaum@nixos" = mkHomeConfiguration "x86_64-linux" "nixos" "g23beaum";
+	# "gwendalbeaumont@Gwendals-MacBook-Pro" = mkHomeConfiguration "aarch64-darwin" "Gwendals-MacBook-Pro" "gwendalbeaumont";
+	#      };
     };
-  };
 }

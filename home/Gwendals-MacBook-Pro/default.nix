@@ -3,6 +3,8 @@
 {
   imports = [
     ../common
+
+    ./git
   ];
 
   home.username = "gwendalbeaumont";
@@ -23,11 +25,5 @@
     enable = true;
     defaultCacheTtl = 1800;
     enableSshSupport = true;
-  };
-
-  programs.git = {
-    enable = true;
-    userName = "Gwendal Beaumont";
-    userEmail = "gwendal.beaumont@gmail.com";
   };
 }

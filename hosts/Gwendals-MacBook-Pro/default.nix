@@ -61,36 +61,10 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    vim
-    fastfetch
-    bat
-    # biber
-    cairo
-    cocoapods
-    coreutils
     curl
-    fd
-    fzf
     git
     gnupg
-    # go
-    # gopls
-    lazygit
-    # lua
-    # neovim
-    jdk
-    # php
-    ripgrep
-    # ruby
-    rustup
-    starship
-    stow
-    texliveFull
-    tree
-    tree-sitter
     wget
-    zsh-autosuggestions
-    zsh-syntax-highlighting
   ];
 
   # Homebrew

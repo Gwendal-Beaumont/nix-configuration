@@ -39,6 +39,9 @@
 	    ./hosts/${hostname}
 	    home-manager.nixosModules.home-manager
 	    {
+	      home-manager.extraSpecialArgs = {
+		inherit username;
+	      };
 	      home-manager.useGlobalPkgs = true;
 	      home-manager.useUserPackages = true;
 	      home-manager.users.${username} = ./home/${hostname};
@@ -67,6 +70,9 @@
 	    ./hosts/${hostname}
 	    home-manager.darwinModules.home-manager
 	    {
+	      home-manager.extraSpecialArgs = {
+		inherit username;
+	      };
 	      home-manager.useGlobalPkgs = true;
 	      home-manager.useUserPackages = true;
 	      home-manager.users.${username} = ./home/${hostname};

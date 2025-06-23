@@ -164,6 +164,7 @@
   # programs.mtr.enable = true;
   programs.virt-manager.enable = true;
   programs.zsh.enable = true;
+  programs.gnupg.agent.enable = true;
 
   # List services that you want to enable:
   services.flatpak.enable = true;

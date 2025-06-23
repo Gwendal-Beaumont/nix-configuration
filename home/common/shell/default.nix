@@ -1,6 +1,15 @@
 { inputs, config, lib, pkgs, ... }:
 {
   home = {
+    shell.enableZshIntegration = true;
+  };
+
+  programs.zsh = {
+    enable = true;
+
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+
     shellAliases = {
       e = "nvim";
       o = "xdg-open";
@@ -26,7 +35,5 @@
       gf = "git fetch";
       gP = "git pull";
     };
-
-    shell.enableZshIntegration = true;
   };
 }

@@ -126,7 +126,7 @@ Encryption Required
   users.users.g23beaum = {
     isNormalUser = true;
     description = "Gwendal";
-    extraGroups = [ "networkmanager" "wheel" "docker" "wireshark" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
     packages = with pkgs; [
       thunderbird
     ];
@@ -145,11 +145,9 @@ Encryption Required
     gnupg
     pinentry
     gcc
-    openvpn
 
     # Utilities
     power-profiles-daemon
-    wireshark
   ];
 
   # Env
@@ -161,11 +159,6 @@ Encryption Required
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  programs.wireshark = {
-    enable = true;
-    usbmon.enable = true;
-  };
-
   programs.virt-manager.enable = true;
 
   # List services that you want to enable:

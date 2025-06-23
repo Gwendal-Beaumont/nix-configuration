@@ -31,7 +31,6 @@
 	nixpkgs.lib.nixosSystem {
 	  specialArgs = {
 	    inherit inputs outputs hostname username;
-	    userConfig = "${username}";
 	    # nixosModules = "${self}/modules/nixos";
 	  };
 
@@ -49,12 +48,6 @@
 
 	    nix-flatpak.nixosModules.nix-flatpak
 	    ./flatpak.nix
-
-	    {
-	      nixpkgs.overlays = [
-		inputs.hyprpanel.overlay
-	      ];
-	    }
 	  ];
 	};
 
@@ -63,7 +56,6 @@
 	  system = "aarch64-darwin";
 	  specialArgs = {
 	    inherit inputs outputs hostname username;
-	    # userConfig = "${username}";
 	  };
 
 	  modules = [

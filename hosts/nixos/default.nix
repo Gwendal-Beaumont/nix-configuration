@@ -61,11 +61,7 @@
   services.printing = {
     enable = true;
 
-    clientConf =
-      "
-ServerName cups-br-01.imta.fr
-Encryption Required
-      ";
+    clientConf = "ServerName\tcups-br-01.imta.fr\nEncryption\tRequired";
   };
 
   security.krb5 = {
@@ -81,7 +77,13 @@ Encryption Required
 
       realms = {
         "CAMPUX.ENST-BRETAGNE.FR" = {
-          kdc = "ldap-public-01.enst-bretagne.fr:88";
+          kdc = [
+            "vss-krb5-01.priv.enst-bretagne.fr"
+            "ldapserv-rennes.imt-atlantique.fr"
+          ];
+          # kdc = [
+          #   "ldap-public-01.enst-bretagne.fr:88"
+          # ];
         };
       };
 
@@ -90,6 +92,7 @@ Encryption Required
         ".svc.enst-bretagne.fr" = "CAMPUX.ENST-BRETAGNE.FR";
         ".ext.enst-bretagne.fr" = "CAMPUX.ENST-BRETAGNE.FR";
         ".enst-bretagne.fr" = "CAMPUX.ENST-BRETAGNE.FR";
+        ".imta.fr" = "CAMPUX.ENST-BRETAGNE.FR";
       };
     };
   };
@@ -160,6 +163,7 @@ Encryption Required
   # started in user sessions.
   # programs.mtr.enable = true;
   programs.virt-manager.enable = true;
+  programs.zsh.enable = true;
 
   # List services that you want to enable:
   services.flatpak.enable = true;

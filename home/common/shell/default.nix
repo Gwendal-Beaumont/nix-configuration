@@ -21,6 +21,9 @@
       ll = "ls -l";
       lla = "ls -la";
 
+      nrs = "sudo nixos-rebuild switch";
+      nfu = "nix flake update --flake ~/nix-configuration/";
+
       lg = "lazygit";
       g = "git";
       ga = "git add";

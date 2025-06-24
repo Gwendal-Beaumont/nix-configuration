@@ -70,50 +70,6 @@
   # Configure console keymap
   console.keyMap = "fr";
 
-  # Enable CUPS to print documents.
-  services.printing = {
-    enable = true;
-    clientConf = "ServerName cups-br-01.imta.fr\nEncryption Required";
-  };
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
-
-  security.krb5 = {
-    enable = true;
-
-    settings = {
-      libdefaults = {
-        default_realm = "CAMPUX.ENST-BRETAGNE.FR";
-        forwardable = true;
-        ticket_lifetime = "12h";
-        renew_lifetime = "90d";
-      };
-
-      realms = {
-        "CAMPUX.ENST-BRETAGNE.FR" = {
-          # kdc = [
-          #   "vss-krb5-01.priv.enst-bretagne.fr"
-          #   "ldapserv-rennes.imt-atlantique.fr"
-          # ];
-          kdc = [
-            "ldap-public-01.enst-bretagne.fr:88"
-          ];
-        };
-      };
-
-      domain_realm = {
-        ".priv.enst-bretagne.fr" = "CAMPUX.ENST-BRETAGNE.FR";
-        ".svc.enst-bretagne.fr" = "CAMPUX.ENST-BRETAGNE.FR";
-        ".ext.enst-bretagne.fr" = "CAMPUX.ENST-BRETAGNE.FR";
-        ".enst-bretagne.fr" = "CAMPUX.ENST-BRETAGNE.FR";
-        ".imta.fr" = "CAMPUX.ENST-BRETAGNE.FR";
-      };
-    };
-  };
-
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -168,12 +124,12 @@
 
     # Utilities
     power-profiles-daemon
+    wireshark
   ];
 
   # Env
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    CUPS_GSSSERVICENAME = "ipp";
   };
 
   # Some programs need SUID wrappers, can be configured further or are

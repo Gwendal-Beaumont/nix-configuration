@@ -21,6 +21,7 @@
       # Utils
       libimobiledevice
       libsecret
+      tcpdump
       usbutils
       wl-clipboard
 

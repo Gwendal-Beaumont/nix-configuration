@@ -13,7 +13,7 @@
   };
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "maple"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -61,7 +61,7 @@
   services.printing = {
     enable = true;
 
-    clientConf = "ServerName\tcups-br-01.imta.fr\nEncryption\tRequired";
+    clientConf = "ServerName cups-br-01.imta.fr\nEncryption Required";
   };
 
   security.krb5 = {
@@ -77,13 +77,13 @@
 
       realms = {
         "CAMPUX.ENST-BRETAGNE.FR" = {
-          kdc = [
-            "vss-krb5-01.priv.enst-bretagne.fr"
-            "ldapserv-rennes.imt-atlantique.fr"
-          ];
           # kdc = [
-          #   "ldap-public-01.enst-bretagne.fr:88"
+          #   "vss-krb5-01.priv.enst-bretagne.fr"
+          #   "ldapserv-rennes.imt-atlantique.fr"
           # ];
+          kdc = [
+            "ldap-public-01.enst-bretagne.fr:88"
+          ];
         };
       };
 
@@ -205,5 +205,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }

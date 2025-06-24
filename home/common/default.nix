@@ -22,6 +22,7 @@
     fastfetch
     fd
     fzf
+    pinentry
     ripgrep
     stow
     tree-sitter

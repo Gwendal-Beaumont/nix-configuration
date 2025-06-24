@@ -146,7 +146,7 @@
   users.users.g23beaum = {
     isNormalUser = true;
     description = "Gwendal";
-    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "wireshark" ];
     packages = with pkgs; [
       thunderbird
     ];
@@ -213,6 +213,12 @@
     };
 
     spiceUSBRedirection.enable = true;
+  };
+
+  # Wireshark
+  programs.wireshark = {
+    enable = true;
+    usbmon.enable = true;
   };
 
   system.stateVersion = "25.05";

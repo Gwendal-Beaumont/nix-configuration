@@ -73,8 +73,12 @@
   # Enable CUPS to print documents.
   services.printing = {
     enable = true;
-
     clientConf = "ServerName cups-br-01.imta.fr\nEncryption Required";
+  };
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
   };
 
   security.krb5 = {

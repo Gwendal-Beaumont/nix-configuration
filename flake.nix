@@ -1,5 +1,5 @@
 {
-  description = "My Entrypoint Flake";
+  description = "My configuration Flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
@@ -10,11 +10,6 @@
     };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-
-    hyprpanel = {
-      url = "github:Jas-SinghFSU/HyprPanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     # nix-darwin (macOS machines)
     nix-darwin = {
@@ -47,7 +42,7 @@
 	    }
 
 	    nix-flatpak.nixosModules.nix-flatpak
-	    ./flatpak.nix
+	    ./modules/flatpak
 	  ];
 	};
 
@@ -98,16 +93,11 @@
     in
     {
       nixosConfigurations = {
-	"nixos" = mkNixosConfiguration "nixos" "g23beaum";
+	"maple" = mkNixosConfiguration "maple" "g23beaum";
       };
 
       darwinConfigurations = {
 	"Gwendals-MacBook-Pro" = mkDarwinConfiguration "Gwendals-MacBook-Pro" "gwendalbeaumont";
       };
-
-	#      homeManagerConfiguration = {
-	# "g23beaum@nixos" = mkHomeConfiguration "x86_64-linux" "nixos" "g23beaum";
-	# "gwendalbeaumont@Gwendals-MacBook-Pro" = mkHomeConfiguration "aarch64-darwin" "Gwendals-MacBook-Pro" "gwendalbeaumont";
-	#      };
     };
 }

@@ -20,6 +20,7 @@
       # Utils
       libimobiledevice
       libsecret
+      pinentry
       usbutils
       wl-clipboard
 

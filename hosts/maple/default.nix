@@ -145,6 +145,16 @@
   services.openssh.enable = true;
   services.pcscd.enable = true;
 
+  # Printing
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      hplip
+      foomatic-db-ppds
+    ];
+  };
+  services.samba.enable = true;
+
   # Docker
   virtualisation.docker.enable = true;
   virtualisation.podman.enable = true;

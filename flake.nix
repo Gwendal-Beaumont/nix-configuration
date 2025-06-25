@@ -9,8 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-
     # nix-darwin (macOS machines)
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
@@ -18,7 +16,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nix-flatpak, nix-darwin, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nix-darwin, ... }@inputs:
     let
       inherit (self) outputs;
 
@@ -40,9 +38,6 @@
 	      home-manager.useUserPackages = true;
 	      home-manager.users.${username} = ./home/${hostname};
 	    }
-
-	    nix-flatpak.nixosModules.nix-flatpak
-	    ./modules/flatpak
 	  ];
 	};
 

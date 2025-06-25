@@ -31,8 +31,11 @@
 
       # Productivity
       libreoffice-fresh
+      discord
       drawio
+      signal-desktop
       slack
+      zotero
 
       # Misc
       which

@@ -8,9 +8,9 @@
       "hyprpanel"
 
       # Launch common apps
-      "flatpak run com.discordapp.Discord"
-      "flatpak run com.slack.Slack"
-      "flatpak run org.signal.Signal"
+      "discord"
+      "slack"
+      "signal-desktop"
       "element-desktop --password-store='gnome-libsecret'"
     ];
   };

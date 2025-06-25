@@ -33,7 +33,7 @@
       libreoffice-fresh
       discord
       drawio
-      signal-desktop
+      signal-desktop-bin
       slack
       zotero
 

@@ -4,8 +4,6 @@ with lib; {
   imports = [
     # Hyprland config
     ./conf
-
-    # ./hyprpanel.nix
   ];
 
   wayland.windowManager.hyprland = {

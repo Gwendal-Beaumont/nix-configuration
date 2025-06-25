@@ -3,8 +3,6 @@
 {
   programs.kitty = {
     enable = true;
-    enableGitIntegration = true;
-    shellIntegration.enableZshIntegration = true;
 
     font = {
       package = pkgs.nerd-fonts.jetbrains-mono;

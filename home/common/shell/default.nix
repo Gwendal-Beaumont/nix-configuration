@@ -1,14 +1,16 @@
 { inputs, config, lib, pkgs, ... }:
 {
-  home = {
-    shell.enableZshIntegration = true;
-  };
-
   programs.zsh = {
     enable = true;
+    defaultKeymap = "emacs";
 
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+
+    initContent = ''
+      bindkey "^[[1;5C" forward-word
+      bindkey "^[[1;5D" backward-word
+    '';
 
     shellAliases = {
       e = "nvim";
@@ -22,6 +24,7 @@
       lla = "ls -la";
 
       nrs = "sudo nixos-rebuild switch";
+      drs = "sudo darwin-rebuild switch";
       nfu = "nix flake update --flake ~/nix-configuration/";
 
       lg = "lazygit";

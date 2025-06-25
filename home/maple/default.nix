@@ -8,7 +8,6 @@
     ./element-desktop
     ./firefox
     ./git
-    ./gpg
     ./hyprland
     ./kitty
   ];
@@ -21,7 +20,6 @@
       # Utils
       libimobiledevice
       libsecret
-      tcpdump
       usbutils
       wl-clipboard
 
@@ -30,15 +28,16 @@
       nmap
 
       # Productivity
-      libreoffice-fresh
-      discord
       drawio
-      signal-desktop-bin
-      slack
+      libreoffice-fresh
       zotero
 
+      # Communication
+      discord
+      signal-desktop-bin
+      slack
+
       # Misc
-      which
       pciutils
       gnomeExtensions.appindicator
     ];

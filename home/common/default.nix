@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./git
     ./gpg
     ./neovim
     ./shell
@@ -26,14 +27,13 @@
     ripgrep
     stow
     tree-sitter
-    zsh-autosuggestions
-    zsh-syntax-highlighting
+    # zsh-autosuggestions
+    # zsh-syntax-highlighting
 
     # Productivity
     texliveFull
 
     # Misc
-    tree
     lazygit
   ];
 }

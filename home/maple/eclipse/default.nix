@@ -3,10 +3,5 @@
 {
   programs.eclipse = {
     enable = true;
-
-    # plugins = [
-    #   eclipse-sdk
-    #   eclipse-modeling
-    # ];
   };
 }

@@ -27,8 +27,6 @@
     ripgrep
     stow
     tree-sitter
-    # zsh-autosuggestions
-    # zsh-syntax-highlighting
 
     # Productivity
     texliveFull

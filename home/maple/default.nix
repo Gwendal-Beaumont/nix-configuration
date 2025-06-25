@@ -20,7 +20,6 @@
       # Utils
       libimobiledevice
       libsecret
-      trash-cli
       usbutils
       wl-clipboard
 

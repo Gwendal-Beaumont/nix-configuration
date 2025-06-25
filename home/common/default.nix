@@ -19,7 +19,6 @@
     # Utils
     bat
     btop
-    lf
     fastfetch
     fd
     fzf
@@ -27,6 +26,10 @@
     ripgrep
     stow
     tree-sitter
+
+    # lf
+    lf
+    trash-cli
 
     # Productivity
     texliveFull

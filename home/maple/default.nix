@@ -38,6 +38,7 @@
       discord
       signal-desktop-bin
       slack
+      zoom-us
 
       # Misc
       pciutils

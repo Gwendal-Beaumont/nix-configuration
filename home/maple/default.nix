@@ -4,6 +4,7 @@
   imports = [
     ../common
 
+    ./alacritty
     ./eclipse
     ./element-desktop
     ./firefox

@@ -19,7 +19,12 @@
   # Networking
   networking = {
     hostName = "maple";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      plugins = with pkgs; [
+        networkmanager-openvpn
+      ];
+    };
 
     # Configure network proxy if necessary
     # proxy = {

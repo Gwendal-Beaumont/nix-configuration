@@ -38,6 +38,8 @@
       discord
       signal-desktop-bin
       slack
+      webex
+      weechat
       zoom-us
 
       # Misc

@@ -21,6 +21,7 @@
       # Utils
       libimobiledevice
       libsecret
+      mkcert
       pinentry
       usbutils
       wl-clipboard

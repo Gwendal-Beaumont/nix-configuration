@@ -11,6 +11,7 @@
     ./git
     ./hyprland
     ./kitty
+    ./vscode
   ];
 
   home = {

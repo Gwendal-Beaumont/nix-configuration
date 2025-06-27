@@ -24,7 +24,6 @@
 	nixpkgs.lib.nixosSystem {
 	  specialArgs = {
 	    inherit inputs outputs hostname username;
-	    # nixosModules = "${self}/modules/nixos";
 	  };
 
 	  modules = [

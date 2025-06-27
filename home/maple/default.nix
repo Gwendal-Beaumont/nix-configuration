@@ -32,6 +32,7 @@
       # Productivity
       drawio
       libreoffice-fresh
+      pympress
       zotero
 
       # Communication

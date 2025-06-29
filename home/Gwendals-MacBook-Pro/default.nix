@@ -16,7 +16,12 @@
       cairo
       cocoapods
       coreutils
-      nerd-fonts.jetbrains-mono
+
+      # cert
+      mkcert
+
+      # Flutter programming
+      flutter
     ];
 
     stateVersion = "25.05";

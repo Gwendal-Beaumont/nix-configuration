@@ -4,6 +4,7 @@
   imports = [
     ./git
     ./gpg
+    ./kitty
     ./neovim
     ./shell
     ./starship

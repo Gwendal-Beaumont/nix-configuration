@@ -5,6 +5,7 @@
     ../common
 
     ./git
+    ./kitty
   ];
 
   home = {

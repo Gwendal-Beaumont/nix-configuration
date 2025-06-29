@@ -4,7 +4,10 @@
   # Homebrew
   homebrew = {
     enable = true;
-    onActivation.cleanup = "uninstall";
+    onActivation = {
+      autoUpdate = true;
+      cleanup = "uninstall";
+    };
 
     taps = [];
     brews = [];

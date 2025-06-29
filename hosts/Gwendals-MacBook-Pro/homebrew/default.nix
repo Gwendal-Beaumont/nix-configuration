@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./masApps.nix
+  ];
+
   # Homebrew
   homebrew = {
     enable = true;
@@ -9,8 +13,6 @@
       cleanup = "uninstall";
     };
 
-    taps = [];
-    brews = [];
     casks = [
       "android-studio"
       "appcleaner"

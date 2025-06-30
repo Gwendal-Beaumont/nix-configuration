@@ -186,8 +186,8 @@
     usbmon.enable = true;
   };
 
-  security.pki.certificateFiles = [
-    ./../../secrets/hosts/maple/rootCA.pem
+  security.pki.certificates = [
+    "./../../secrets/hosts/maple/rootCA.pem"
   ];
 
   networking.hosts = {

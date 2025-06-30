@@ -20,12 +20,14 @@
     # Utils
     bat
     btop
+    curl
     fastfetch
     fd
     fzf
     ripgrep
     stow
     tree-sitter
+    wget
 
     # lf
     lf

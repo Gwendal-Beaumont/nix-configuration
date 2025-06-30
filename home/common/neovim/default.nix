@@ -9,5 +9,9 @@
 
     withNodeJs = true;
     withRuby = true;
+
+    extraPackages = with pkgs; [
+      markdownlint-cli
+    ];
   };
 }

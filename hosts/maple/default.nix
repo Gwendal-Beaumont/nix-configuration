@@ -21,9 +21,6 @@
     hostName = "${hostname}";
     networkmanager = {
       enable = true;
-      plugins = with pkgs; [
-        networkmanager-openvpn
-      ];
     };
 
     # Configure network proxy if necessary
@@ -190,7 +187,7 @@
   };
 
   security.pki.certificateFiles = [
-    /home/${username}/.local/share/mkcert/rootCA.pem
+    ./../../secrets/hosts/maple/rootCA.pem
   ];
 
   networking.hosts = {

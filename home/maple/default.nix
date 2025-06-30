@@ -4,7 +4,6 @@
   imports = [
     ../common
 
-    ./alacritty
     ./eclipse
     ./element-desktop
     ./firefox
@@ -22,7 +21,6 @@
       # Utils
       libimobiledevice
       libsecret
-      mkcert
       pinentry
       usbutils
       wl-clipboard
@@ -34,19 +32,15 @@
       # Productivity
       drawio
       libreoffice-fresh
-      pympress
       zotero
 
       # Communication
       discord
       signal-desktop-bin
       slack
-      webex
-      weechat
       zoom-us
 
       # Misc
-      markdownlint-cli
       pciutils
       gnomeExtensions.appindicator
     ];

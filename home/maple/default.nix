@@ -46,6 +46,7 @@
       zoom-us
 
       # Misc
+      markdownlint-cli
       pciutils
       gnomeExtensions.appindicator
     ];

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, hostname, username, ... }:
 
 {
   imports = [
@@ -18,7 +18,7 @@
 
   # Networking
   networking = {
-    hostName = "maple";
+    hostName = "${hostname}";
     networkmanager = {
       enable = true;
       plugins = with pkgs; [
@@ -187,6 +187,22 @@
   programs.wireshark = {
     enable = true;
     usbmon.enable = true;
+  };
+
+  security.pki.certificateFiles = [
+    /home/${username}/.local/share/mkcert/rootCA.pem
+  ];
+
+  networking.hosts = {
+    "127.0.0.1" = [
+      "example.local"
+      "matrix.example.local"
+      "auth.example.local"
+      "element.example.local"
+      "call.example.local"
+      "livekit.example.local"
+      "livekit-jwt.example.local"
+    ];
   };
 
   system.stateVersion = "25.05";

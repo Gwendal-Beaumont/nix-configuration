@@ -18,6 +18,6 @@
       gnome-connections
       totem
       yelp
-    ]
+    ];
   };
 }

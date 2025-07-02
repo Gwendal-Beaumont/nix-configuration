@@ -12,6 +12,7 @@
 
     extraPackages = with pkgs; [
       markdownlint-cli
+      gopls
     ];
   };
 }

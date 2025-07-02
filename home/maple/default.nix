@@ -44,6 +44,7 @@
       # Misc
       pciutils
       gnomeExtensions.appindicator
+      gnome3.gnome-tweaks
     ];
 
     stateVersion = "25.05";

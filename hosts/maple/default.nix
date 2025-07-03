@@ -123,11 +123,7 @@
     vim
     gnupg
     pinentry
-    gcc
-
-    # Utilities
     power-profiles-daemon
-    wireshark
   ];
 
   # Env

@@ -19,6 +19,7 @@
 
     packages = with pkgs; [
       # Utils
+      gcc
       libimobiledevice
       libsecret
       pinentry
@@ -28,6 +29,7 @@
       # Network
       dnsutils
       nmap
+      wireshark
 
       # Productivity
       drawio

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 
 {
   config = {
@@ -21,6 +21,10 @@
       };
 
       spiceUSBRedirection.enable = true;
+    };
+
+    users.users."${username}" = {
+      extraGroups = [ "libvirtd" ];
     };
   };
 }

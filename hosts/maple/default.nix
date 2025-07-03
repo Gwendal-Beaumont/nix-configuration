@@ -108,7 +108,7 @@
   users.users.g23beaum = {
     isNormalUser = true;
     description = "Gwendal";
-    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "wireshark" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       thunderbird
     ];

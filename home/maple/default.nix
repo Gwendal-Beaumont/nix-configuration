@@ -29,7 +29,6 @@
       # Network
       dnsutils
       nmap
-      wireshark
 
       # Productivity
       drawio
@@ -40,8 +39,6 @@
       # Communication
       discord
       signal-desktop-bin
-      slack
-      zoom-us
 
       # Misc
       pciutils

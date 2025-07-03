@@ -92,7 +92,7 @@
       };
 
       darwinConfigurations = {
-	"Gwendals-MacBook-Pro" = mkDarwinConfiguration "Gwendals-MacBook-Pro" "gwendalbeaumont";
+	"cedar" = mkDarwinConfiguration "cedar" "gwendalbeaumont";
       };
     };
 }

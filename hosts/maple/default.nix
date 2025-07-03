@@ -5,6 +5,8 @@
     ./hardware-configuration.nix
 
     "${nixosModules}/gnome"
+    "${nixosModules}/printing"
+    "${nixosModules}/qemu"
   ];
 
   # Bootloader.
@@ -143,41 +145,9 @@
   services.openssh.enable = true;
   services.pcscd.enable = true;
 
-  # Printing
-  services.printing = {
-    enable = true;
-    drivers = with pkgs; [
-      hplip
-      foomatic-db-ppds
-    ];
-  };
-  services.samba.enable = true;
-
   # Docker
   virtualisation.docker.enable = true;
   virtualisation.podman.enable = true;
-
-  # QEMU/KVM
-  programs.virt-manager.enable = true;
-  virtualisation = {
-    libvirtd = {
-      enable = true;
-      qemu = {
-        package = pkgs.qemu_kvm;
-        runAsRoot = true;
-        swtpm.enable = true;
-        ovmf = {
-          enable = true;
-          packages = [(pkgs.OVMF.override {
-            secureBoot = true;
-            tpmSupport = true;
-          }).fd];
-        };
-      };
-    };
-
-    spiceUSBRedirection.enable = true;
-  };
 
   # Wireshark
   programs.wireshark = {

@@ -35,6 +35,9 @@
 
     # Productivity
     texliveFull
+    hunspell
+    hunspellDicts.en_US
+    hunspellDicts.fr-any
 
     # Misc
     lazygit

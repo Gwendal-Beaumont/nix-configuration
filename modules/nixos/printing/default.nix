@@ -2,7 +2,6 @@
 
 {
   config = {
-    # Printing
     services.printing = {
       enable = true;
       drivers = with pkgs; [

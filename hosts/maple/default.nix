@@ -6,7 +6,7 @@
 
     "${nixosModules}/gnome"
     "${nixosModules}/printing"
-    "${nixosModules}/qemu"
+    # "${nixosModules}/qemu"
   ];
 
   # Bootloader.

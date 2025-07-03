@@ -4,9 +4,11 @@
   imports = [
     ./hardware-configuration.nix
 
+    "${nixosModules}/docker"
     "${nixosModules}/gnome"
     "${nixosModules}/printing"
     # "${nixosModules}/qemu"
+    # "${nixosModules}/wireshark"
   ];
 
   # Bootloader.
@@ -140,16 +142,6 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   services.pcscd.enable = true;
-
-  # Docker
-  virtualisation.docker.enable = true;
-  virtualisation.podman.enable = true;
-
-  # Wireshark
-  programs.wireshark = {
-    enable = true;
-    usbmon.enable = true;
-  };
 
   security.pki.certificates = [
     "./../../secrets/hosts/maple/rootCA.pem"

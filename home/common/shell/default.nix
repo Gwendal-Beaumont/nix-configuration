@@ -16,6 +16,7 @@
       e = "nvim";
       o = "xdg-open";
       open = "xdg-open";
+      mk = "(){ mkdir -p $1 && cd $1 }";
       phd = "cd $HOME/Documents/twindevops";
 
       ls = "ls --color";

@@ -88,7 +88,7 @@
   };
 
   # User account. Don't forget to set a password with ‘passwd’.
-  users.users.g23beaum = {
+  users.users.${username} = {
     isNormalUser = true;
     description = "Gwendal";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -125,22 +125,6 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   services.pcscd.enable = true;
-
-  security.pki.certificates = [
-    "./../../secrets/hosts/maple/rootCA.pem"
-  ];
-
-  networking.hosts = {
-    "127.0.0.1" = [
-      "example.local"
-      "matrix.example.local"
-      "auth.example.local"
-      "element.example.local"
-      "call.example.local"
-      "livekit.example.local"
-      "livekit-jwt.example.local"
-    ];
-  };
 
   system.stateVersion = "25.05";
 }

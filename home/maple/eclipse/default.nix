@@ -3,5 +3,7 @@
 {
   programs.eclipse = {
     enable = true;
+
+    package = pkgs.eclipses.eclipse-modeling;
   };
 }

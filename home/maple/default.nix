@@ -20,6 +20,7 @@
     packages = with pkgs; [
       # Utils
       gcc
+      jdk
       libimobiledevice
       libsecret
       pinentry

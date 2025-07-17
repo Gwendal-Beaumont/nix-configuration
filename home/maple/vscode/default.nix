@@ -10,7 +10,7 @@
         enableExtensionUpdateCheck = true;
 
         extensions = with pkgs.vscode-extensions; [
-          vscjava.vscode-java-pack
+          ms-azuretools.vscode-docker
         ];
 
         userSettings = {

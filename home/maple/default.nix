@@ -10,7 +10,7 @@
     ./git
     # ./hyprland
     ./kitty
-    ./vscode
+    # ./vscode
   ];
 
   home = {
@@ -24,12 +24,7 @@
       libimobiledevice
       libsecret
       pinentry
-      usbutils
       wl-clipboard
-
-      # Network
-      dnsutils
-      nmap
 
       # Productivity
       drawio
@@ -42,7 +37,6 @@
       signal-desktop-bin
 
       # Misc
-      pciutils
       gnomeExtensions.appindicator
       gnome-tweaks
     ];

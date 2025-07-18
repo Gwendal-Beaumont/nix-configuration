@@ -20,7 +20,6 @@
     packages = with pkgs; [
       # Utils
       gcc
-      jdk
       libimobiledevice
       libsecret
       pinentry
@@ -28,7 +27,7 @@
 
       # Productivity
       drawio
-      libreoffice-fresh
+      # libreoffice-fresh
       nextcloud-client
       zotero
 

@@ -4,7 +4,6 @@
   imports = [
     ../common
 
-    ./alacritty
     ./git
     ./kitty
   ];

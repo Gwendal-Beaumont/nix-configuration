@@ -8,7 +8,6 @@
     "eclipse-ide"
     "element"
     "firefox"
-    "google-chrome"
     "kitty"
     "libreoffice"
     "logi-options+"

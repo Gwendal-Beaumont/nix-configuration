@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./brews.nix
     ./casks.nix
     ./masApps.nix
   ];

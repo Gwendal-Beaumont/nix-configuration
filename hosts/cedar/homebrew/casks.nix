@@ -2,8 +2,7 @@
 
 {
   homebrew.casks = [
-    "android-studio"
-    "appcleaner"
+    # "android-studio"
     "discord"
     "drawio"
     "eclipse-ide"
@@ -13,7 +12,6 @@
     "kitty"
     "libreoffice"
     "logi-options+"
-    "nextcloud"
     "openvpn-connect"
     "protonvpn"
     "raycast"
@@ -24,7 +22,7 @@
     "vlc"
     "webex"
     "whatsapp"
-    "zoom"
+    # "zoom"
     "zotero"
   ];
 }

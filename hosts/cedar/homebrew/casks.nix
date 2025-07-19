@@ -2,11 +2,22 @@
 
 {
   homebrew.casks = [
+    # Dev
     # "android-studio"
-    "discord"
-    "drawio"
     "eclipse-ide"
+    "visual-studio-code"
+
+    # Communications
+    "discord"
     "element"
+    "signal"
+    "slack"
+    "thunderbird"
+    "whatsapp"
+    "webex"
+
+    # Utils
+    "drawio"
     "firefox"
     "kitty"
     "libreoffice"
@@ -14,14 +25,7 @@
     "openvpn-connect"
     "protonvpn"
     "raycast"
-    "signal"
-    "slack"
-    "thunderbird"
-    "visual-studio-code"
     "vlc"
-    "webex"
-    "whatsapp"
-    # "zoom"
     "zotero"
   ];
 }

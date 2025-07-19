@@ -16,12 +16,6 @@
       cairo
       cocoapods
       coreutils
-
-      # cert
-      mkcert
-
-      # Flutter programming
-      flutter
     ];
 
     stateVersion = "25.05";

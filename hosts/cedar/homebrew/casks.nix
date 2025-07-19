@@ -23,6 +23,7 @@
     "libreoffice"
     "logi-options+"
     "openvpn-connect"
+    "orbstack"
     "protonvpn"
     "raycast"
     "vlc"

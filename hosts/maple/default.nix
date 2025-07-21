@@ -82,7 +82,7 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Garabge collection
+  # Garbage collection
   nix = {
     gc = {
       automatic = true;
@@ -118,15 +118,12 @@
     NIXOS_OZONE_WL = "1";
   };
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
+  # Programs
   programs.zsh.enable = true;
 
-  # Enable GnuPG
   programs.gnupg.agent = {
     enable = true;
-    pinentryPackage = pkgs.pinentry-tty;
+    pinentryPackage = pkgs.pinentry-curses;
   };
 
   # Enable the OpenSSH daemon.

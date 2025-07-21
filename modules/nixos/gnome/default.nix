@@ -9,13 +9,14 @@
       decibels
       epiphany
       geary
-      gnome-text-editor
+      gnome-characters
+      gnome-connections
       gnome-console
       gnome-contacts
       gnome-maps
       gnome-music
+      gnome-text-editor
       gnome-tour
-      gnome-connections
       gnome-weather
       totem
       yelp

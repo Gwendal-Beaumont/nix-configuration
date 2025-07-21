@@ -58,12 +58,12 @@
     excludePackages = with pkgs; [
       xterm
     ];
-  };
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "fr";
-    variant = "";
+    # Configure keymap in X11
+    xkb = {
+      layout = "fr";
+      variant = "";
+    };
   };
 
   # Configure console keymap
@@ -111,8 +111,6 @@
   environment.systemPackages = with pkgs; [
     git
     vim
-    gnupg
-    pinentry
   ];
 
   # Env
@@ -124,7 +122,12 @@
   # started in user sessions.
   # programs.mtr.enable = true;
   programs.zsh.enable = true;
-  programs.gnupg.agent.enable = true;
+
+  # Enable GnuPG
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-tty;
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

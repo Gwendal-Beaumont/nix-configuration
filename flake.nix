@@ -59,6 +59,7 @@
 	      home-manager.useGlobalPkgs = true;
 	      home-manager.useUserPackages = true;
 	      home-manager.users.${username} = ./home/${hostname};
+	      home-manager.verbose = true;
 	    }
 	  ];
 	};

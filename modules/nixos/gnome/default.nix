@@ -16,6 +16,7 @@
       gnome-music
       gnome-tour
       gnome-connections
+      gnome-weather
       totem
       yelp
     ];

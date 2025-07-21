@@ -126,5 +126,8 @@
   services.openssh.enable = true;
   services.pcscd.enable = true;
 
+  # Deactivate documentation
+  documentation.nixos.enable = false;
+
   system.stateVersion = "25.05";
 }

@@ -42,4 +42,6 @@
     # Misc
     lazygit
   ];
+
+  home.verbose = true;
 }

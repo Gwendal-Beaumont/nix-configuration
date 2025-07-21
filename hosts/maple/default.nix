@@ -113,7 +113,6 @@
     vim
     gnupg
     pinentry
-    power-profiles-daemon
   ];
 
   # Env

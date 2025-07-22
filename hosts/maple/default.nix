@@ -66,6 +66,9 @@
     };
   };
 
+  # Power management for laptops
+  services.thermald.enable = true;
+
   # Configure console keymap
   console.keyMap = "fr";
 

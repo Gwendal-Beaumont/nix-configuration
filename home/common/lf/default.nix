@@ -5,24 +5,24 @@
     enable = true;
 
     commands = {
-      rename = "%[ -e $1 ] && printf "file exists" || mv $f $1";
+      rename = "%[ -e $1 ] && printf 'file exists' || mv $f $1";
       trash = "%trash-put -- $fx";
-      zip = "${{ set -f mkdir $1 cp -r $fx $1 zip -r $1.zip $1 rm -rf $1 }}";
+      zip = "$\{\{\n\tset -f\n\tmkdir $1\n\tcp -r $fx $1\n\tzip -r $1.zip $1\n\trm -rf $1\n\}\}";
     };
 
     keybindings = {
-      "`" = "!true";
-      "n" = "push %mkdir<space>";
       "." = "set hidden!";
+      "`" = "!true";
       "d" = "trash";
+      "n" = "push %mkdir<space>";
       "r" = "push :rename<space>";
     };
 
     settings = {
-      ifs = "'\n'";
+      ifs = "\\n";
       scrolloff = 10;
       shell = "sh";
-      shellopts = "'-eu'";
+      shellopts = "-eu";
     };
   };
 }

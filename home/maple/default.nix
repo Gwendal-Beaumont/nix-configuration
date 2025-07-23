@@ -12,7 +12,7 @@
     ./kitty
     # ./rofi
     # ./vscode
-    ./wlogout
+    # ./wlogout
   ];
 
   home = {

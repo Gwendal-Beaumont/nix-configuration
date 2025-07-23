@@ -10,6 +10,7 @@
     ./git
     # ./hyprland
     ./kitty
+    # ./rofi
     # ./vscode
   ];
 

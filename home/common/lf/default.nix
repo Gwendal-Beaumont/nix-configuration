@@ -19,7 +19,9 @@
     };
 
     settings = {
+      icons = true;
       ifs = "\\n";
+      mouse = true;
       scrolloff = 10;
       shell = "sh";
       shellopts = "-eu";

@@ -7,7 +7,33 @@
     settings = {
       bar = {
         autoHide = "fullscreen";
-        clock.format = "%a%e %b %H:%M";
+        battery = {
+          hideLabelWhenFull = false;
+          label = true;
+        };
+        bluetooth.label = false;
+        clock = {
+          format = "%a%e %b %H =%M";
+          showIcon = true;
+          showTime = true;
+        };
+        customModules = {
+          netstat = {
+            dynamicIcon = true;
+            leftClick = "menu =network";
+            networkInterface = "enp0s13f0u2u4";
+            pollingInterval = 5000;
+            rateUnit = "auto";
+          };
+          storage.paths = [
+            "/"
+          ];
+          updates = {
+            autoHide = true;
+            pollingInterval = 1440000;
+          };
+          weather.unit = "metric";
+        };
         launcher.autoDetectIcon = true;
         layouts = {
           "*" = {
@@ -30,137 +56,144 @@
             ];
           };
         };
+        media = {
+          show_active_only = true;
+          show_label = true;
+          truncation_size = 50;
+        };
+        network = {
+          label = true;
+          showWifiInfo = true;
+        };
+        notifications = {
+          hideCountWhenZero = true;
+          show_total = true;
+        };
+        volume ={
+          label = true;
+          rightClick = "wpctl set-mute @DEFAULT_SINK@ toggle";
+        };
         workspaces = {
+          numbered_active_indicator = "underline";
+          showApplicationIcons = false;
+          showWsIcons = false;
           show_icons = false;
           show_numbered = true;
           workspaceMask = false;
-          numbered_active_indicator = "underline";
-        };
-
-      theme = {
-        bar = {
-          floating = false;
-          location = "top";
-          buttons = {
-            enableBorders = false;
-          };
-
-          menus = {
-            monochrome = true;
-            card_radius = "0.4em";
-            popover.text = "#ffffff";
-            listitems.active = "#ffffff";
-            icons.active = "#ff8000";
-            switch.enabled = "#ff8000";
-            check_radio_button.active = "#ff8000";
-            buttons.default = "#ff8000";
-            iconbuttons.active = "#ff8000";
-            progressbar.foreground = "#ff8000";
-            slider.primary = "#ff8000";
-            dropdownmenu.text = "#ffffff";
-            tooltip.text = "#ffffff";
-            iconbuttons.passive = "#ffffff";
-            cards = "#1e1e2e";
-            background = "#000000";
-          };
-        };
-
-        font = {
-          name = "JetBrainsMono Nerd Font";
-          label = "JetBrainsMono Nerd Font";
-          size = "0.9rem";
-        };
-
-        osd = {
-          scaling = 90;
         };
       };
 
       menus = {
         clock = {
           time = {
-            military = true;
             hideSeconds = false;
+            military = true;
           };
           weather = {
-            location = "Los Angeles";
-            unit = "metric";
+            enabled = false;
           };
         };
-        power.lowBatteryNotification = true;
+        dashboard = {
+          controls.enabled = false;
+          directories.enabled = false;
+          powermenu.confirmation = true;
+          shortcuts.left = {
+            shortcut1 = {
+              command = "firefox";
+              icon = "󰈹";
+              tooltip = "Mozilla Firefox";
+            };
+            shortcut2 = {
+              command = "firefox --new-tab https =//music.apple.com/fr/";
+              icon = "󰝚";
+              tooltip = "Apple Music";
+            };
+            shortcut4.command = "rofi -show drun -show-icons";
+          };
+          stats.enabled = true;
+        };
+        media = {
+          displayTime = true;
+          displayTimeTooltip = true;
+          hideAuthor = false;
+        };
+        power = {
+          lowBatteryNotification = true;
+          showLabel = true;
+        };
         transition = "crossfade";
+        volume.raiseMaximumVolume = false;
       };
-
-      bar.volume.label = true;
-      menus.clock.weather.key = "";
-      notifications.monitor = 0;
-      bar.network.label = true;
-      bar.network.showWifiInfo = true;
-      bar.battery.label = true;
-      bar.battery.hideLabelWhenFull = false;
-      bar.media.show_active_only = true;
-      bar.notifications.show_total = true;
-      bar.notifications.hideCountWhenZero = true;
-      theme.bar.border.location = "none";
-      theme.bar.outer_spacing = "0.4em";
-      menus.media.hideAuthor = false;
-      menus.media.displayTimeTooltip = true;
-      bar.media.show_label = true;
-      bar.media.truncation_size = 50;
-      theme.bar.transparent = false;
-      theme.bar.buttons.style = "default";
-      theme.bar.buttons.monochrome = true;
-      theme.bar.menus.text = "#f6f5f4";
-      theme.bar.menus.label = "#ffffff";
-      theme.bar.buttons.text = "#ffffff";
-      theme.bar.buttons.icon = "#ffffff";
-      theme.bar.buttons.workspaces.active = "#ffffff";
-      theme.bar.buttons.workspaces.numbered_active_underline_color = "#ffffff";
-      theme.bar.buttons.workspaces.occupied = "#ffffff";
-      theme.bar.background = "#000000";
-      wallpaper.enable = false;
-      menus.power.showLabel = true;
-      theme.bar.buttons.modules.netstat.enableBorder = false;
-      bar.customModules.netstat.dynamicIcon = true;
-      bar.customModules.netstat.rateUnit = "auto";
-      bar.customModules.netstat.pollingInterval = 5000;
-      bar.customModules.netstat.leftClick = "menu:network";
-      bar.customModules.updates.autoHide = true;
-      bar.customModules.weather.unit = "metric";
+      notifications = {
+        monitor = 0;
+        position = "top right";
+        showActionsOnHover = true;
+      };
       tear = false;
-      bar.workspaces.showWsIcons = false;
-      bar.workspaces.showApplicationIcons = false;
-      bar.volume.rightClick = "wpctl set-mute @DEFAULT_SINK@ toggle";
-      bar.bluetooth.label = false;
-      bar.clock.showIcon = true;
-      bar.clock.showTime = true;
-      notifications.position = "top right";
-      notifications.showActionsOnHover = true;
-      theme.osd.orientation = "horizontal";
-      theme.osd.location = "bottom";
-      theme.osd.margins = "7px 7px 200px 7px";
-      theme.osd.muted_zero = false;
-      menus.volume.raiseMaximumVolume = false;
-      menus.clock.weather.enabled = false;
-      theme.bar.menus.menu.dashboard.profile.size = "8.5em";
-      menus.dashboard.powermenu.confirmation = true;
-      menus.dashboard.controls.enabled = false;
-      menus.dashboard.stats.enabled = true;
-      menus.dashboard.directories.enabled = false;
-      menus.dashboard.shortcuts.left.shortcut1.command = "firefox";
-      menus.dashboard.shortcuts.left.shortcut1.icon = "󰈹";
-      menus.dashboard.shortcuts.left.shortcut4.command = "rofi -show drun -show-icons";
-      menus.dashboard.shortcuts.left.shortcut2.icon = "󰝚";
-      menus.dashboard.shortcuts.left.shortcut2.command = "firefox --new-tab https://music.apple.com/fr/";
-      menus.dashboard.shortcuts.left.shortcut2.tooltip = "Apple Music";
-      theme.font.weight = 600;
-      menus.media.displayTime = true;
-      menus.dashboard.shortcuts.left.shortcut1.tooltip = "Mozilla Firefox";
-      bar.customModules.netstat.networkInterface = "enp0s13f0u2u4";
-      theme.bar.buttons.background = "#1c1c1c";
-      bar.customModules.storage.paths = [
-        "/"
-      ];
+      theme = {
+        background = "#000000";
+        border.location = "none";
+        buttons = {
+          background = "#1c1c1c";
+          battery.enableBorder = false;
+          clock.enableBorder = false;
+          enableBorders = false;
+          icon = "#ffffff";
+          media.enableBorder = false;
+          modules.netstat.enableBorder = false;
+          monochrome = true;
+          network.enableBorder = false;
+          notifications.enableBorder = false;
+          style = "default";
+          systray.enableBorder = false;
+          text = "#ffffff";
+          workspaces = {
+            active = "#ffffff";
+            enableBorder = false;
+            numbered_active_underline_color = "#ffffff";
+            occupied = "#ffffff";
+          };
+        };
+        floating = false;
+        location = "top";
+        menus = {
+          background = "#000000";
+          buttons.default = "#ff8000";
+          card_radius = "0.4em";
+          cards = "#1e1e2e";
+          check_radio_button.active = "#ff8000";
+          dropdownmenu.text = "#ffffff";
+          iconbuttons.active = "#ff8000";
+          iconbuttons.passive = "#ffffff";
+          icons.active = "#ff8000";
+          label = "#ffffff";
+          listitems.active = "#ffffff";
+          menu.dashboard.profile.size = "8.5em";
+          monochrome = true;
+          popover.text = "#ffffff";
+          progressforeground = "#ff8000";
+          slider.primary = "#ff8000";
+          switch.enabled = "#ff8000";
+          text = "#f6f5f4";
+          tooltip.text = "#ffffff";
+        };
+        outer_spacing = "0.4em";
+        transparent = false;
+        font = {
+          label = "JetBrainsMono Nerd Font";
+          name = "JetBrainsMono Nerd Font";
+          size = "0.9rem";
+          weight = 600;
+        };
+        osd = {
+          location = "bottom";
+          margins = "7px 7px 200px 7px";
+          muted_zero = false;
+          orientation = "horizontal";
+          scaling = 90;
+        };
+      };
+      wallpaper.enable = false
     };
   };
 }

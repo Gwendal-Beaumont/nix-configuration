@@ -193,7 +193,7 @@
           scaling = 90;
         };
       };
-      wallpaper.enable = false
+      wallpaper.enable = false;
     };
   };
 }

@@ -5,6 +5,7 @@
     ./git
     ./gpg
     ./kitty
+    ./lf
     ./neovim
     ./shell
     ./starship

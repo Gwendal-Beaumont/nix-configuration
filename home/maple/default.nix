@@ -8,7 +8,7 @@
     ./element-desktop
     ./firefox
     ./git
-    ./hyprland
+    # ./hyprland
     ./kitty
     # ./rofi
     # ./vscode

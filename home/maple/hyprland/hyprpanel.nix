@@ -13,7 +13,7 @@
         };
         bluetooth.label = false;
         clock = {
-          format = "%a%e %b %H =%M";
+          format = "%a%e %b %H:%M";
           showIcon = true;
           showTime = true;
         };

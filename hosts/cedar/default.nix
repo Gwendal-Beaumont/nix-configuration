@@ -38,17 +38,27 @@
       NSGlobalDomain = {
         AppleInterfaceStyleSwitchesAutomatically = true;
         AppleShowAllExtensions = true;
+        NSAutomaticSpellingCorrectionEnabled = false;
         NSAutomaticWindowAnimationsEnabled = false;
+      };
+      controlcenter = {
+        BatteryShowPercentage = true;
       };
       dock = {
         autohide = true;
         expose-animation-duration = 0.15;
+        orientation = "left";
         show-recents = false;
         showhidden = true;
         wvous-bl-corner = 1;
         wvous-br-corner = 1;
         wvous-tl-corner = 1;
         wvous-tr-corner = 1;
+      };
+      finder = {
+        ShowPathbar = true;
+        ShowStatusBar = true;
+        _FXSortFoldersFirst = true;
       };
       screencapture = {
         type = "png";

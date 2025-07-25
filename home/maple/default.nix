@@ -40,6 +40,7 @@
       # Misc
       gnomeExtensions.appindicator
       gnome-tweaks
+      vlc
     ];
 
     stateVersion = "25.05";

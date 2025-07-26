@@ -20,6 +20,7 @@
       open = "xdg-open";
       mk = "(){ mkdir -p $1 && cd $1 }";
       phd = "cd $HOME/Documents/twindevops";
+      youtube = "yt-dlp -S res,ext:mp4:m4a --recode mp4";
 
       ls = "ls --color";
       l = "ls";

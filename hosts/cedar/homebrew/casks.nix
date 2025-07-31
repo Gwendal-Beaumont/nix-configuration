@@ -23,6 +23,7 @@
     "logi-options+"
     "openvpn-connect"
     "orbstack"
+    "proton-pass"
     "protonvpn"
     "raycast"
     "vlc"

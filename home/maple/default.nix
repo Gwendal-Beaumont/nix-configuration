@@ -22,7 +22,6 @@
     packages = with pkgs; [
       # Utils
       gcc
-      libimobiledevice
       libsecret
       pinentry
       wl-clipboard

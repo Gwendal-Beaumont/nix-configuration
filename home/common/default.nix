@@ -25,6 +25,7 @@
     fastfetch
     fd
     fzf
+    gnumake
     ripgrep
     stow
     tree-sitter

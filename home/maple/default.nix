@@ -6,6 +6,7 @@
 
     ./eclipse
     ./element-desktop
+    ./emacs
     ./firefox
     ./git
     # ./hyprland
@@ -40,6 +41,10 @@
       gnomeExtensions.appindicator
       gnome-tweaks
       vlc
+    ];
+
+    sessionPath = [
+      "$HOME/.config/emacs/bin/doom"
     ];
 
     stateVersion = "25.05";

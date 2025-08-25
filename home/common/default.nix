@@ -21,6 +21,7 @@
     # Utils
     bat
     btop
+    coreutils
     curl
     fastfetch
     fd
@@ -44,5 +45,7 @@
 
     # Misc
     lazygit
+    shellcheck
+    nerd-fonts.symbols-only
   ];
 }

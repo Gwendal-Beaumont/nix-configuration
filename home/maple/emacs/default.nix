@@ -4,6 +4,6 @@
   programs.emacs = {
     enable = true;
 
-    extraPackages = epkgs: [ epkgs.markdown-mode ];
+    extraPackages = epkgs: [ epkgs.markdown-mode epkgs.pinentry ];
   };
 }

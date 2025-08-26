@@ -24,7 +24,6 @@
       # Utils
       gcc
       libsecret
-      pinentry
       wl-clipboard
 
       # Productivity

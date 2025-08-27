@@ -14,7 +14,6 @@
     packages = with pkgs; [
       cairo
       cocoapods
-      coreutils
     ];
 
     stateVersion = "25.05";

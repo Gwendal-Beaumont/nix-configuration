@@ -29,16 +29,19 @@
 
 	  modules = [
 	    ./hosts/${hostname}
-	    home-manager.nixosModules.home-manager
-	    {
-	      home-manager.extraSpecialArgs = {
-		inherit username;
-	      };
-	      home-manager.useGlobalPkgs = true;
-	      home-manager.useUserPackages = true;
-	      home-manager.users.${username} = ./home/${hostname};
-	      home-manager.verbose = true;
-	    }
+	     home-manager.nixosModules.home-manager
+	     {
+         home-manager = {
+           useGlobalPkgs = true;
+	         useUserPackages = true;
+	         verbose = true;
+	         users.${username} = ./home/${hostname};
+
+           extraSpecialArgs = {
+             inherit username;
+           };
+         };
+	     }
 	  ];
 	};
 
@@ -52,41 +55,20 @@
 	  modules = [
 	    ./hosts/${hostname}
 	    home-manager.darwinModules.home-manager
-	    {
-	      home-manager.extraSpecialArgs = {
-		inherit username;
-	      };
-	      home-manager.useGlobalPkgs = true;
-	      home-manager.useUserPackages = true;
-	      home-manager.users.${username} = ./home/${hostname};
-	      home-manager.verbose = true;
+      {
+        home-manager = {
+          useGlobalPkgs = true;
+	        useUserPackages = true;
+	        verbose = true;
+	        users.${username} = ./home/${hostname};
+
+          extraSpecialArgs = {
+            inherit username;
+          };
+        };
 	    }
 	  ];
 	};
-
-	#      mkHomeConfiguration = system: hostname: username:
-	# home-manager.lib.homeManagerConfiguration {
-	#  pkgs = import nixpkgs { inherit system; };
-	#
-	#   extraSpecialArgs = {
-	#     inherit inputs outputs;
-	#     userConfig = users.${username};
-	#     nhModules = "${self}/modules/home-manager";
-	#   };
-	#
-	#   modules = [
-	#     ./home/${hostname}
-	#
-	#     {
-	#       home-manager.useGlobalPkgs = true;
-	#       home-manager.useUserPackages = true;
-	#       home-manager.users.${username} = ./home/${hostname};
-	#
-	#       # Optionally, use home-manager.extraSpecialArgs to pass
-	#       # arguments to home.nix
-	#     }
-	#   ];
-	# };
     in
     {
       nixosConfigurations = {

@@ -40,6 +40,12 @@
       gnomeExtensions.appindicator
       gnome-tweaks
       vlc
+
+      # Emacs
+      nixfmt
+      python3Full
+      isort
+      pipenv
     ];
 
     sessionPath = [

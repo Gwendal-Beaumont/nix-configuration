@@ -38,7 +38,6 @@
 
       # Misc
       gnomeExtensions.appindicator
-      gnomeExtensions.unite
       gnome-tweaks
       vlc
     ];

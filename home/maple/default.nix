@@ -28,7 +28,7 @@
 
       # Productivity
       drawio
-      # libreoffice-fresh
+      libreoffice-fresh
       nextcloud-client
       zotero
 
@@ -42,6 +42,7 @@
       vlc
 
       # Emacs
+      cmake # for vTerm
       nixfmt
       python3Full
       isort

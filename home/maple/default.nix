@@ -43,6 +43,7 @@
 
       # Emacs
       cmake # for vTerm
+      libtool
       nixfmt
       python3Full
       isort

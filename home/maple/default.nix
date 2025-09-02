@@ -32,14 +32,9 @@
       nextcloud-client
       zotero
 
-      # Communication
-      discord
-      signal-desktop-bin
-
       # Misc
       gnomeExtensions.appindicator
       gnome-tweaks
-      vlc
 
       # Emacs
       cmake # for vTerm

@@ -28,7 +28,6 @@
     fzf
     gnumake
     ripgrep
-    stow
     tree-sitter
     wget
     yt-dlp

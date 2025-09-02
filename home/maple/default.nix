@@ -46,7 +46,7 @@
     ];
 
     sessionPath = [
-      "$HOME/.emacs.d/bin/doom"
+      "$HOME/.emacs.d/bin"
     ];
 
     stateVersion = "25.05";

@@ -20,7 +20,6 @@
       open = "xdg-open";
       mk = "(){ mkdir -p $1 && cd $1 }";
       phd = "cd $HOME/Documents/twindevops";
-      youtube = "yt-dlp -S res,ext:mp4:m4a --recode mp4";
 
       ls = "ls --color";
       l = "ls";
@@ -32,18 +31,6 @@
       nfu = "nix flake update --flake ~/nix-configuration/";
 
       lg = "lazygit";
-      g = "git";
-      ga = "git add";
-      gaa = "git add -A";
-      gcm = "git commit -m";
-      gs = "git status";
-      gss = "git status -s";
-      gb = "git branch";
-      gc = "git checkout";
-      gcb = "git checkout -b";
-      gp = "git push";
-      gf = "git fetch";
-      gP = "git pull";
     };
   };
 }

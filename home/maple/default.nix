@@ -25,6 +25,7 @@
       gcc
       libsecret
       wl-clipboard
+      kubernetes-helm
 
       # Productivity
       drawio

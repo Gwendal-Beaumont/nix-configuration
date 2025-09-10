@@ -9,7 +9,6 @@
     # ./neovim
     ./shell
     ./starship
-    # ./tmux
   ];
 
   # Packages that should be installed to the user profile.

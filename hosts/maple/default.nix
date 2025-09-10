@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
 
-    "${nixosModules}/docker"
+    # "${nixosModules}/docker"
     "${nixosModules}/gnome"
     # "${nixosModules}/hyprland"
     "${nixosModules}/printing"

@@ -28,8 +28,8 @@
 
       # Productivity
       drawio
-      libreoffice-fresh
-      nextcloud-client
+      # libreoffice-fresh
+      # nextcloud-client
       zotero
 
       # Misc

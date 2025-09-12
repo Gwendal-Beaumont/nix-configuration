@@ -40,7 +40,7 @@
       cmake # for vTerm
       libtool
       nixfmt
-      python3Full
+      python3Minimal
       isort
       pipenv
     ];

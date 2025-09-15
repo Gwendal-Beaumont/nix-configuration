@@ -93,7 +93,7 @@
 
             # increase the buffer size if you get dropouts/glitches
             args = {
-              "raop.latency.ms" = 500;
+              "raop.latency.ms" = 1500;
             };
           }
         ];

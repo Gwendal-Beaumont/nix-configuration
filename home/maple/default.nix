@@ -35,6 +35,7 @@
       # Misc
       gnomeExtensions.appindicator
       gnome-tweaks
+      noto-fonts-cjk-sans
 
       # Emacs
       cmake # for vTerm

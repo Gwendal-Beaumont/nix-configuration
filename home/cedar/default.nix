@@ -15,6 +15,7 @@
       cairo
       cocoapods
       pinentry_mac
+      lazygit
     ];
 
     stateVersion = "25.05";

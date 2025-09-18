@@ -42,7 +42,6 @@
     hunspellDicts.fr-any
 
     # Misc
-    lazygit
     shellcheck
     nerd-fonts.symbols-only
   ];

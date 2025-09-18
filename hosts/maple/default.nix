@@ -83,22 +83,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-
-    # raopOpenFirewall = true;
-    # extraConfig.pipewire = {
-    #   "10-airplay" = {
-    #     "context.modules" = [
-    #       {
-    #         name = "libpipewire-module-raop-discover";
-
-    #         # increase the buffer size if you get dropouts/glitches
-    #         args = {
-    #           "raop.latency.ms" = 1500;
-    #         };
-    #       }
-    #     ];
-    #   };
-    # };
   };
 
   # Enable touchpad support (enabled default in most desktopManager).

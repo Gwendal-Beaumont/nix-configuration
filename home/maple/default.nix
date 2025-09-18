@@ -29,7 +29,6 @@
       # Productivity
       drawio
       # libreoffice-fresh
-      # nextcloud-client
       zotero
 
       # Misc

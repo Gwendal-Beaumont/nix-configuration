@@ -18,6 +18,7 @@
     # Utils
     "drawio"
     "firefox"
+    "kdrive"
     "kitty"
     "libreoffice"
     "logi-options+"

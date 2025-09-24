@@ -12,7 +12,6 @@
     # ./hyprland
     ./kitty
     # ./rofi
-    # ./vscode
     # ./wlogout
   ];
 
@@ -25,10 +24,11 @@
       gcc
       libsecret
       wl-clipboard
+      networkmanager-openvpn
 
       # Productivity
       drawio
-      # libreoffice-fresh
+      libreoffice-fresh
       zotero
 
       # Misc

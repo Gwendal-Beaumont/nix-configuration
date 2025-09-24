@@ -10,7 +10,7 @@
     ];
 
     policies = {
-      "AutofillAdressEnabled" = false;
+      "AutofillAddressEnabled" = false;
       "AutofillCreditCardEnabled" = false;
       "DisableFormHistory" = true;
       "DisablePocket" = true;

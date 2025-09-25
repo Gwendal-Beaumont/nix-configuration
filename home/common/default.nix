@@ -29,7 +29,6 @@
     ripgrep
     tree-sitter
     wget
-    yt-dlp
 
     # lf
     lf

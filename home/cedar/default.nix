@@ -16,6 +16,7 @@
       cocoapods
       pinentry_mac
       lazygit
+      yt-dlp
     ];
 
     stateVersion = "25.05";

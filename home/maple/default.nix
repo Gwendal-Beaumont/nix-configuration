@@ -21,10 +21,9 @@
 
     packages = with pkgs; [
       # Utils
-      gcc
+      libgcc
       libsecret
       wl-clipboard
-      networkmanager-openvpn
 
       # Productivity
       drawio

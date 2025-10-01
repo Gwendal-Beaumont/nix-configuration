@@ -27,7 +27,6 @@
 
       # Productivity
       drawio
-      libreoffice-fresh
       zotero
 
       # Misc

@@ -3,6 +3,7 @@
 {
   homebrew.casks = [
     # Dev
+    "emacs-mac"
     "eclipse-ide"
     "visual-studio-code"
 

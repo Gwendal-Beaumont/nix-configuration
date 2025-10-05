@@ -6,7 +6,7 @@
     ./gpg
     ./kitty
     ./lf
-    # ./neovim
+    ./neovim
     ./shell
     ./starship
   ];

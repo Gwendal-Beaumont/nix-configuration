@@ -27,7 +27,6 @@
     "orbstack"
     "protonvpn"
     "qobuz"
-    "raycast"
     "vlc"
     "zotero"
   ];

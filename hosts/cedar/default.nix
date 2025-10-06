@@ -1,8 +1,8 @@
-{ pkgs, username, ... }:
+{ config, pkgs, hostname, username, darwinModules, ... }:
 
 {
   imports = [
-    ./homebrew
+    "${darwinModules}/homebrew"
   ];
 
   nix = {

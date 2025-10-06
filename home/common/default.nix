@@ -26,15 +26,13 @@
     fd
     fzf
     gnumake
+    lf
     ripgrep
+    trash-cli
     tree-sitter
     wget
 
-    # lf
-    lf
-    trash-cli
-
-    # Productivity
+    # LaTeX
     texliveFull
     hunspell
     hunspellDicts.en_US

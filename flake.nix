@@ -50,6 +50,7 @@
 	  system = "aarch64-darwin";
 	  specialArgs = {
 	    inherit inputs outputs hostname username;
+      darwinModules = "${self}/modules/darwin";
 	  };
 
 	  modules = [

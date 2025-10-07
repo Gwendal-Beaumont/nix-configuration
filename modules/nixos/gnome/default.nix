@@ -13,11 +13,13 @@
       gnome-connections
       gnome-console
       gnome-contacts
+      gnome-font-viewer
       gnome-maps
       gnome-music
       gnome-text-editor
       gnome-tour
       gnome-weather
+      simple-scan
       totem
       yelp
     ];

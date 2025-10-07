@@ -59,20 +59,6 @@
     };
   };
 
-  # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-    excludePackages = with pkgs; [
-      xterm
-    ];
-
-    # Configure keymap in X11
-    xkb = {
-      layout = "fr";
-      variant = "";
-    };
-  };
-
   # Power management for laptops
   services.thermald.enable = true;
 

@@ -7,7 +7,6 @@
     "visual-studio-code"
 
     # Communications
-    "discord"
     "element"
     "signal"
     "slack"

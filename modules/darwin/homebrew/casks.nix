@@ -22,7 +22,6 @@
     "logi-options+"
     "openvpn-connect"
     "orbstack"
-    "protonvpn"
     "qobuz"
     "vlc"
     "zotero"

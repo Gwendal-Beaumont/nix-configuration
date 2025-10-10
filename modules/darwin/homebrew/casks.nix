@@ -7,7 +7,6 @@
     "visual-studio-code"
 
     # Communications
-    "element"
     "signal"
     "slack"
     "thunderbird"

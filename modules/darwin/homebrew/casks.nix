@@ -8,7 +8,6 @@
 
     # Communications
     "signal"
-    "slack"
     "thunderbird"
     "whatsapp"
     "webex"

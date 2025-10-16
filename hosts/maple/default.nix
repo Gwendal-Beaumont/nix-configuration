@@ -8,7 +8,7 @@
     "${nixosModules}/gnome"
     # "${nixosModules}/hyprland"
     "${nixosModules}/printing"
-    # "${nixosModules}/qemu"
+    "${nixosModules}/qemu"
     # "${nixosModules}/wireshark"
   ];
 

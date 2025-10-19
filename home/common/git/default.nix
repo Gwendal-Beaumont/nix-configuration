@@ -4,7 +4,7 @@
   programs.git = {
     enable = true;
 
-    userName = "Gwendal Beaumont";
+    settings.user.name = "Gwendal Beaumont";
 
     signing = {
       format = "openpgp";

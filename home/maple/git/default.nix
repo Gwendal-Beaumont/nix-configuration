@@ -2,7 +2,7 @@
 
 {
   programs.git = {
-    userEmail = "gwendal.beaumont@imt-atlantique.fr";
+    settings.user.email = "gwendal.beaumont@imt-atlantique.fr";
 
     signing = {
       key = "DBF0167B74C46CA84C0D258851F454CFBA3AEA40";

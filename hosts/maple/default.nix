@@ -5,11 +5,11 @@
     ./hardware-configuration.nix
 
     # "${nixosModules}/docker"
-    "${nixosModules}/flatpak"
+    # "${nixosModules}/flatpak"
     "${nixosModules}/gnome"
     # "${nixosModules}/hyprland"
     "${nixosModules}/printing"
-    "${nixosModules}/qemu"
+    # "${nixosModules}/qemu"
     # "${nixosModules}/wireshark"
   ];
 

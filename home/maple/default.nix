@@ -34,12 +34,8 @@
       noto-fonts-cjk-sans
 
       # Emacs
-      cmake # for vTerm
       libtool
       nixfmt
-      python3Minimal
-      isort
-      pipenv
     ];
 
     sessionPath = [

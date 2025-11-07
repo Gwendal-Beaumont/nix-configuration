@@ -102,6 +102,7 @@
 
   # List packages installed in system profile. To search, run:
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.download-buffer-size = 524288000;
   environment.systemPackages = with pkgs; [
     git
     vim

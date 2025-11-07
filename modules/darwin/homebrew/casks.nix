@@ -3,6 +3,7 @@
 {
   homebrew.casks = [
     # Dev
+    "android-studio"
     "eclipse-ide"
     "visual-studio-code"
 

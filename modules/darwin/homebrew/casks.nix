@@ -14,9 +14,9 @@
     "webex"
 
     # Utils
+    "darktable"
     "drawio"
     "firefox"
-    "kdrive"
     "kitty"
     "libreoffice"
     "logi-options+"

@@ -18,6 +18,8 @@
       pinentry_mac
       lazygit
       yt-dlp
+
+      flutter
     ];
 
     stateVersion = "25.05";

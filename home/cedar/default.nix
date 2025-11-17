@@ -18,7 +18,6 @@
       cocoapods
       pinentry_mac
       lazygit
-      yt-dlp
 
       # Development
       flutter

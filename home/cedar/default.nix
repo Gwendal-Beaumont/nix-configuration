@@ -19,13 +19,14 @@
       pinentry_mac
       lazygit
 
-      # Development
-      flutter
-
       # Dictionnaries
       hunspell
       hunspellDicts.en_US
       hunspellDicts.fr-any
+    ];
+
+    sessionPath = [
+      "$HOME/flutter/bin"
     ];
 
     stateVersion = "25.05";

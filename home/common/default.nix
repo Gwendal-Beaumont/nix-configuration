@@ -11,7 +11,6 @@
     ./starship
   ];
 
-  # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # Archives
     zip
@@ -34,9 +33,5 @@
 
     # LaTeX
     texliveFull
-
-    # Misc
-    shellcheck
-    nerd-fonts.symbols-only
   ];
 }

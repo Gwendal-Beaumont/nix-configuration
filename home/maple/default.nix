@@ -19,11 +19,6 @@
     homeDirectory = "/home/${username}";
 
     packages = with pkgs; [
-      # Utils
-      libgcc
-      libsecret
-      wl-clipboard
-
       # Productivity
       drawio
       zotero
@@ -31,10 +26,10 @@
       # Misc
       noto-fonts-cjk-sans
 
-      # Emacs
-      libtool
-      nixfmt
-      (aspellWithDicts (dicts: with dicts; [ en en-computers en-science fr ]))
+      # Utils
+      libgcc
+      libsecret
+      wl-clipboard
     ];
 
     sessionPath = [

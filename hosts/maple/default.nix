@@ -13,7 +13,7 @@
     # "${nixosModules}/wireshark"
   ];
 
-  # Bootloader.
+  # Bootloader
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.loader = {
@@ -38,6 +38,13 @@
       networkmanager-openvpn
       ];
     };
+  };
+
+  # Security
+  security.pam.yubico = {
+    enable = true;
+    mode = "challenge-response";
+    id = [ "35769241" ];
   };
 
   # Set your time zone.

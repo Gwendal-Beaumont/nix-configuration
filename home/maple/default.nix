@@ -21,6 +21,7 @@
     packages = with pkgs; [
       # Productivity
       drawio
+      libreoffice-fresh
       zotero
 
       # Misc

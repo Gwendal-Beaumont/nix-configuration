@@ -8,6 +8,7 @@
     "visual-studio-code"
 
     # Communications
+    "element"
     "signal"
     "thunderbird"
     "whatsapp"

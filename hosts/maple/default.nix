@@ -132,7 +132,7 @@
   services.openssh.enable = true;
   services.pcscd.enable = true;
 
-  # Enable Linux Vender Firmware Update
+  # Enable Linux Vendor Firmware Update
   services.fwupd.enable = true;
 
   # Deactivate documentation

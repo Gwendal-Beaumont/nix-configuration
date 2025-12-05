@@ -132,6 +132,9 @@
   services.openssh.enable = true;
   services.pcscd.enable = true;
 
+  # Enable Linux Vender Firmware Update
+  services.fwupd.enable = true;
+
   # Deactivate documentation
   documentation.nixos.enable = false;
 

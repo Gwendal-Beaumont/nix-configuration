@@ -18,6 +18,7 @@
     packages = with pkgs; [
       # Productivity
       drawio
+      evince
       libreoffice-fresh
       zotero
 

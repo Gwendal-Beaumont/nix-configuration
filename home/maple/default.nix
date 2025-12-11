@@ -8,10 +8,7 @@
     ./emacs
     ./firefox
     ./git
-    # ./hyprland
     ./kitty
-    # ./rofi
-    # ./wlogout
   ];
 
   home = {

@@ -7,7 +7,6 @@
     # "${nixosModules}/docker"
     # "${nixosModules}/flatpak"
     "${nixosModules}/gnome"
-    # "${nixosModules}/hyprland"
     "${nixosModules}/printing"
     # "${nixosModules}/qemu"
     # "${nixosModules}/wireshark"
